@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/konra/OneDrive/Dokumenty/CPPprojects/cw-poprzedni
+# Install script for directory: C:/Users/Konrad/CLionProjects/cw-poprzedni
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/konra/OneDrive/Dokumenty/CPPprojects/cw-poprzedni/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Konrad/CLionProjects/cw-poprzedni/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

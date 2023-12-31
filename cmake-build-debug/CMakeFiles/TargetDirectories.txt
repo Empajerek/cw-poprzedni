@@ -1,3 +1,4 @@
-C:/Users/konra/OneDrive/Dokumenty/CPPprojects/cw-poprzedni/cmake-build-debug/CMakeFiles/cw_poprzedni.dir
-C:/Users/konra/OneDrive/Dokumenty/CPPprojects/cw-poprzedni/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/konra/OneDrive/Dokumenty/CPPprojects/cw-poprzedni/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Konrad/CLionProjects/cw-poprzedni/cmake-build-debug/CMakeFiles/cw_poprzedni.dir
+C:/Users/Konrad/CLionProjects/cw-poprzedni/cmake-build-debug/CMakeFiles/TEST.dir
+C:/Users/Konrad/CLionProjects/cw-poprzedni/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Konrad/CLionProjects/cw-poprzedni/cmake-build-debug/CMakeFiles/rebuild_cache.dir
