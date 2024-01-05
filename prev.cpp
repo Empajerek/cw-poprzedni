@@ -13,7 +13,7 @@ using namespace std;
  * @struct Node
  * @brief Strukura węzła z których budujemy nasze drzewo przedziałowe
  */
-static struct Node {
+struct Node {
     node_ptr left, right;
     int value;
     // konstruktor do pustego węzła z wartością
@@ -41,7 +41,7 @@ static int avg(int x, int y){
  */
 static vector<node_ptr> getNodesAlongWay(int index, int x){
     vector<node_ptr> gatheredNodes;
-    int l = 0, r = 15, current;
+    int l = 0, r = 15;
     node_ptr curr_Node = roots[index];
     while(l != r){
         if(x > avg(l, r)){
@@ -57,22 +57,9 @@ static vector<node_ptr> getNodesAlongWay(int index, int x){
     }
     return gatheredNodes;
 }
-// funkcja debugowa rysujaca drzewo
-static void printNode(const string prefix, const node_ptr node, bool isLeft){
-    if(node != nullptr){
-        cout << prefix << (isLeft ? "├──" : "└──" ) << node->value << std::endl;
-        printNode( prefix + (isLeft ? "│   " : "    "), node->right, true);
-        printNode( prefix + (isLeft ? "│   " : "    "), node->left, false);
-    }else{
-        cout << prefix << (isLeft ? "├──" : "└──" ) << "*" << std::endl;
-    }
-}
-static void printDrzewo(const node_ptr &node){
-    printNode("", node, false);    
-}
 
 void pushBack(int v){
-    int l = 0, p = 15, index = roots.size();
+    int l = 0, p = 15, index = (int) roots.size();
     node_ptr prev_in_tree;
     if(roots.empty()){
         prev_in_tree = nullptr;
@@ -103,7 +90,7 @@ void pushBack(int v){
 }
 
 void init(const vector<int> &x){
-    int x_size = x.size();
+    int x_size = (int) x.size();
     for(int i = 0; i < x_size; i++)
         pushBack(x[i]);
 }
@@ -113,13 +100,13 @@ int prevInRange(int index, int lo, int hi){
     int common_node_index = 0;
     vector<node_ptr> lo_nodes = getNodesAlongWay(index, lo);
     vector<node_ptr> hi_nodes = getNodesAlongWay(index, hi);
-    while(common_node_index < lo_nodes.size() && common_node_index < hi_nodes.size() &&
+    while(common_node_index < (int) lo_nodes.size() && common_node_index < (int) hi_nodes.size() &&
            lo_nodes[common_node_index] == hi_nodes[common_node_index]) {
         common_node_index++;
     }
     // gdy jest co sprawdzać dla wartości mniejszych
-    if(common_node_index != lo_nodes.size()){
-        for(int i = common_node_index; i < lo_nodes.size() - 1; i++) {
+    if(common_node_index != (int) lo_nodes.size()){
+        for(int i = (int) common_node_index; i < (int) lo_nodes.size() - 1; i++) {
             if (lo_nodes[i]->right != nullptr && lo_nodes[i]->right->value > m 
                 && lo_nodes[i]->right != lo_nodes[i+1]) {
                     m = lo_nodes[i]->right->value;
@@ -129,8 +116,8 @@ int prevInRange(int index, int lo, int hi){
             m = MAX(m, lo_nodes.back()->value);
     }
     // gdy jest co sprawdzać dla wartości większych
-    if(common_node_index != hi_nodes.size()){
-        for(int i = common_node_index; i < hi_nodes.size() - 1; i++) {
+    if(common_node_index != (int) hi_nodes.size()){
+        for(int i = (int) common_node_index; i < (int) hi_nodes.size() - 1; i++) {
             if (hi_nodes[i]->left != nullptr && hi_nodes[i]->left->value > m
                 && hi_nodes[i]->left != hi_nodes[i+1]) {
                 m = hi_nodes[i]->left->value;

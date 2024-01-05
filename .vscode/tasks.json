@@ -9,6 +9,7 @@
                 "-g",
                 "${fileDirname}\\main.cpp",
                 "${fileDirname}\\prev.cpp",
+                "@opcjeCpp",
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"
             ],
