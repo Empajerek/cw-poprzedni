@@ -41,7 +41,7 @@ static int avg(int x, int y){
  */
 static vector<node_ptr> getNodesAlongWay(int index, int x){
     vector<node_ptr> gatheredNodes;
-    int l = 0, r = 15;
+    int l = INT_MIN, r = INT_MAX;
     node_ptr curr_Node = roots[index];
     while(l != r){
         if(x > avg(l, r)){
@@ -59,7 +59,7 @@ static vector<node_ptr> getNodesAlongWay(int index, int x){
 }
 
 void pushBack(int v){
-    int l = 0, p = 15, index = (int) roots.size();
+    int l = INT_MIN, p = INT_MAX, index = (int) roots.size();
     node_ptr prev_in_tree;
     if(roots.empty()){
         prev_in_tree = nullptr;
