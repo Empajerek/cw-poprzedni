@@ -1,8 +1,6 @@
 #include "prev.h"
 #include <memory>
-// DEBUG
-#include <iostream>
-#include <string>
+#include <climits>
 
 using namespace std;
 
@@ -57,6 +55,37 @@ static vector<node_ptr> getNodesAlongWay(int index, int x){
     }
     return gatheredNodes;
 }
+
+/*
+                                               .
+                                   .         ;  
+      .              .              ;%     ;;   
+        ,           ,                :;%  %;   
+         :         ;                   :;%;'     .,   
+,.        %;     %;            ;        %;'    ,;
+  ;       ;%;  %%;        ,     %;    ;%;    ,%'
+   %;       %;%;      ,  ;       %;  ;%;   ,%;' 
+    ;%;      %;        ;%;        % ;%;  ,%;'
+     `%;.     ;%;     %;'         `;%%;.%;'
+      `:;%.    ;%%. %@;        %; ;@%;%'
+         `:%;.  :;bd%;          %;@%;'
+           `@%:.  :;%.         ;@@%;'   
+             `@%.  `;@%.      ;@@%;         
+               `@%%. `@%%    ;@@%;        
+                 ;@%. :@%%  %@@%;       
+                   %@bd%%%bd%%:;     
+                     #@%%%%%:;;
+                     %@@%%%::;
+                     %@@@%(o);  . '         
+                     %@@@o%;:(.,'         
+                 `.. %@@@o%::;         
+                    `)@@@o%::;         
+                     %@@(o)::;        
+                    .%@@@@%::;         
+                    ;%@@@@%::;.          
+                   ;%@@@@%%:;;;. 
+               ...;%@@@@@%%:;;;;,..    Gilo97
+*/
 
 void pushBack(int v){
     int l = INT_MIN, p = INT_MAX, index = (int) roots.size();
